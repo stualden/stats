@@ -1,0 +1,148 @@
+% Financial Mathematics
+% Exercise Template
+%----------------------------------------------
+\documentclass[12pt]{exam}
+
+\usepackage{amsmath}
+\usepackage{cmbright}
+\usepackage{setspace}
+\usepackage{enumitem}
+\usepackage{enumerate}
+
+% This combination generated some errors:
+% \usepackage{lmodern}
+% \usepackage[T1]{fontenc}
+% \usepackage{amsmath,amsthm}
+% \usepackage{sansmathfonts}
+% \renewcommand{\familydefault}{\sfdefault}
+
+\pagestyle{head}
+\rhead{Name: \rule[-0.1cm]{5cm}{0.01cm}}
+\lhead{Stats* - Mr. Alden - The Haverford School\\Chapter 5 Pop Quiz}
+
+% More spacing between questions - doesn't work, but at least no errors
+%\setlist{parsep=12pt}
+
+%\doublespacing  didn't really work
+
+% Comment out for actual quiz:
+%\printanswers
+
+% Create a True False question format
+\newcommand*{\TrueFalse}[1]{%
+\ifprintanswers
+    \ifthenelse{\equal{#1}{T}}{%
+        \textbf{\underline{T}}\hspace*{14pt}F
+    }{
+        T\hspace*{14pt}\textbf{\underline{F}}
+    }
+\else
+    {T}\hspace*{20pt}F
+\fi
+}
+
+\newlength\TFlengthA
+\newlength\TFlengthB
+\settowidth\TFlengthA{\hspace*{.75in}}
+\newcommand\TFQuestion[2]{%
+    \setlength\TFlengthB{\linewidth}
+    \addtolength\TFlengthB{-\TFlengthA}
+    \parbox[t]{\TFlengthA}{\TrueFalse{#1}}\parbox[t]{\TFlengthB}{#2}}
+
+\begin{document}
+
+\begin{flushleft}
+    20 minutes, 20 problems, 5 points each, 100 points total. \\
+    Closed book/notes/tablet/laptop; calculator okay but not needed.
+\end{flushleft}
+%\vspace{.5in}
+
+\begin{flushleft}
+    Indicate whether each statement is (T)rue or (F)alse.
+\end{flushleft}
+
+% This didn't work for trying generalize vertical space between questions...
+% \begin{itemize}[topsep=8pt,itemsep=4pt,partopsep=4pt, parsep=4pt]
+%     \item Some text
+
+\begin{questions}
+
+    \question\TFQuestion{T}{For any continuous random variable, the area under its probability density function (pdf) curve
+                            is equal to 1.00.}
+%    \question T \quad F \quad
+    \vspace{6mm}
+    \question\TFQuestion{T}{All normal pdf curves are symmetric and ``bell-shaped.''}
+    \vspace{6mm}
+
+    \question\TFQuestion{F}{As the standard deviation of a normal distribution gets smaller, the curve becomes lower and wider.}
+    \vspace{6mm}
+
+    \question\TFQuestion{F}{For a \underline{standard} normal distribution, $ P(X < 2) \approx .84 $.}
+    \vspace{6mm}
+
+    \question\TFQuestion{F}{The Empirical Rule is applicable \underline{only} to the \underline{standard} normal distribution.}
+    \vspace{6mm}
+
+    \question\TFQuestion{T}{If a random variable X is \underline{uniformly} distributed on the real interval [7, 34], then
+                            $ P(15 < X < 16) \approx .03704 $.}
+    \vspace{6mm}
+
+    \question\TFQuestion{F}{By the Empirical Rule, about 99.7\% of the area under a normal curve is within 1 standard
+                            deviation of the mean.}
+    \vspace{6mm}
+
+    \question\TFQuestion{F}{If X is uniformly distributed on the interval [8,37], then its pdf over that interval
+                            is f(x) = .1287.}
+    \vspace{6mm}
+
+    \question\TFQuestion{F}{The domain of a normal probability density function (pdf) is $ (-\infty,\infty) $ and
+                            its range is $ (0,1) $.}
+    \vspace{5mm}
+
+    \question\TFQuestion{F}{The standard normal curve is the \underline{only} normal curve with a standard deviation of exactly 1.00.}
+    \vspace{6mm}
+
+    \pagebreak
+    \bigbreak
+    \vspace{2in}
+
+    \question\TFQuestion{F}{The total area under a normal probability density curve is inversely proportional to
+                            its maximum height (at the top of the "bell").}
+    \vspace{6mm}
+
+    \question\TFQuestion{F}{For a standard normal density function, $ P(x > 1) \approx\ 0.84 $.}
+    \vspace{6mm}
+
+    \question\TFQuestion{F}{The standard normal distribution has a mean of one and a standard deviation of zero.}
+    \vspace{6mm}
+
+    \question\TFQuestion{T}{For any continuous random variable X, $ P(X = a) = 0 $  for any single point $ a $.}
+    \vspace{6mm}
+
+    \question\TFQuestion{T}{For a \underline{symmetrical} continuous probability distribution, the mean and median are the same.}
+    \vspace{6mm}
+
+    \question\TFQuestion{F}{The domain of a normal \underline{cumulative} density function (cdf) is $ (-\infty,\infty) $ and
+                            its range is $ (0, \frac{1}{\sqrt{2\pi\sigma}}) $.}
+    \vspace{6mm}
+
+    \question\TFQuestion{T}{The \underline{inverse} normal function permits you (when you're working with a normally distributed
+                            random variable) to find a data point, given a probability.}
+    \vspace{6mm}
+
+    \question\TFQuestion{T}{If a random variable is normally distributed with mean $ \mu $ and standard deviation $ \sigma $
+                               (where $ \mu $ and $ \sigma $ are constants), then the linear transformation $ Y = \frac{X-\mu}{\sigma} $
+                               is distributed in accordance with the \underline{standard} normal distribution.}
+    \vspace{6mm}
+
+    \question\TFQuestion{T}{If $ a, b, c, d $ are real numbers where $ a < b < c < d $, and X is a continuous random variable
+                              that is uniformly distributed on $ [a,d] $, then $ P(b < X < c ) = \frac{(c-b)}{(d-a)} $.}
+    \vspace{6mm}
+
+    \question\TFQuestion{F}{All bell-shaped, symmetric probability curves are normal.}
+    \vspace{6mm}
+
+
+\end{questions}
+
+\end{document}
